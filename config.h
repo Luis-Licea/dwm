@@ -64,6 +64,10 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *volume_tgl[] = { "amixer", "set", "Master", "toggle", NULL };
 static const char *volume_add[] = { "amixer", "set", "Master",  "2%+", "unmute", NULL };
 static const char *volume_sub[] = { "amixer", "set", "Master",  "2%-", "unmute", NULL };
+static const char *next[] = {"dmenu_playerctl", "next", NULL};
+static const char *play[] = {"dmenu_playerctl", "play-pause", NULL};
+static const char *prev[] = {"dmenu_playerctl", "previous", NULL};
+static const char *pick[] = {"dmenu_playerctl", "pick-player", NULL};
 
 
 static Key keys[] = {
@@ -94,6 +98,12 @@ static Key keys[] = {
     { 0,                            XF86XK_AudioMute,          spawn, {.v = volume_tgl} },
     { 0,                            XF86XK_AudioLowerVolume,   spawn, {.v = volume_sub} },
     { 0,                            XF86XK_AudioRaiseVolume,   spawn, {.v = volume_add} },
+    { 0,                            XF86XK_AudioNext,          spawn, {.v = next}},
+    { 0,                            XF86XK_AudioPlay,          spawn, {.v = play}},
+    { 0,                            XF86XK_AudioPrev,          spawn, {.v = prev}},
+    { MODKEY,                       XF86XK_AudioNext,          spawn, {.v = pick}},
+    { MODKEY,                       XF86XK_AudioPlay,          spawn, {.v = pick}},
+    { MODKEY,                       XF86XK_AudioPrev,          spawn, {.v = pick}},
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)
     TAGKEYS(                        XK_3,                      2)
