@@ -64,10 +64,10 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *volume_tgl[] = { "amixer", "set", "Master", "toggle", NULL };
 static const char *volume_add[] = { "amixer", "set", "Master",  "2%+", "unmute", NULL };
 static const char *volume_sub[] = { "amixer", "set", "Master",  "2%-", "unmute", NULL };
-static const char *next[] = {"dmenu_playerctl", "next", NULL};
-static const char *play[] = {"dmenu_playerctl", "play-pause", NULL};
-static const char *prev[] = {"dmenu_playerctl", "previous", NULL};
-static const char *pick[] = {"dmenu_playerctl", "pick-player", NULL};
+static const char *next[] = {"rofi_playerctl", "next", NULL};
+static const char *play[] = {"rofi_playerctl", "play-pause", NULL};
+static const char *prev[] = {"rofi_playerctl", "previous", NULL};
+static const char *pick[] = {"rofi_playerctl",  NULL};
 
 
 static Key keys[] = {
